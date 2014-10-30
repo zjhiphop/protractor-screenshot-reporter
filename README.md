@@ -7,16 +7,16 @@ Use meta data stored as JSON along with the screenshots to create extensive and 
 
 
 ## Usage
-The `protractor-screenshot-reporter` is available via npm:
+The `jasmine-screenshot-reporter` is available via npm:
 
 ```bash
-$ npm install protractor-screenshot-reporter --save-dev
+$ npm install jasmine-screenshot-reporter --save-dev
 ```
 
-In your Protractor configuration file, register `protractor-screenshot-reporter` in Jasmine:
+In your Protractor configuration file, register `jasmine-screenshot-reporter` in Jasmine:
 
 ```javascript
-var ScreenShotReporter = require('protractor-screenshot-reporter');
+var ScreenShotReporter = require('jasmine-screenshot-reporter');
 
 exports.config = {
    // your config here ...

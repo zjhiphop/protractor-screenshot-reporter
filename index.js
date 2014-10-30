@@ -98,6 +98,8 @@ function ScreenshotReporter(options) {
 		options.takeScreenShotsForSkippedSpecs || false;
 	this.takeScreenShotsOnlyForFailedSpecs =
 		options.takeScreenShotsOnlyForFailedSpecs || false;
+
+  this.onBeforeSave = options.onBeforeSave || function() {};
 }
 
 /** Function: reportSpecResults
@@ -152,6 +154,15 @@ function reportSpecResults(spec) {
 
 
 			metaData.screenShotFile = screenShotFile;
+
+      self.onBeforeSave(
+          spec
+          , descriptions
+          , results
+          , capabilities
+          , png
+      );
+
 			mkdirp(directory, function(err) {
 				if(err) {
 					throw new Error('Could not create directory ' + directory);

@@ -1,4 +1,8 @@
 # Changelog
+## Version 0.0.6
+* Add event for before save screenshot
+
+# Changelog
 ## Version 0.0.5
 * Fixed order when fetching descriptions of specs in defaultMetaDataBuilder.
 
